@@ -2,8 +2,17 @@ using System;
 					
 public class Program
 {
-	public static void Main()
+	
+	public ClassNames pickedClass;
+	
+	
+	public void Main()
 	{
+		pickedClass = new ClassNames();
+		/*string classInput = Console.ReadLine();
+		pickedClass.currentClass = ClassNames.Classes.classInput;
+		pickedClass.CheckClass();*/
+		
 		Console.WriteLine("This is a Temperature Adviser! Please insert the temperature in degrees Celsius:");
 		int temperature = Convert.ToInt32(Console.ReadLine());
 		if (temperature >= 30) {
@@ -77,4 +86,38 @@ public class Program
 			}
 		}
 	}
+		
+	public class ClassNames {
+	
+	
+	public enum Classes {
+		Math,
+		English,
+		Science,
+		Engineering
+	}
+	
+	public Classes currentClass = Classes.Math;
+	
+	
+	public void CheckClass() 
+	{
+		switch (currentClass) {
+			case Classes.Math:
+				Console.WriteLine("Math Class");
+				break;
+			case Classes.English:
+				Console.WriteLine("English Class");
+				break;
+			case Classes.Science:
+				Console.WriteLine("Science Class");
+				break;
+			case Classes.Engineering:
+				Console.WriteLine("Engineering Class");
+				break;
+		}
+	}
+	}
+	
+	
 }
