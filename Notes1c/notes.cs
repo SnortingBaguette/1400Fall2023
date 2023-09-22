@@ -38,4 +38,10 @@ public class Program
 			Console.WriteLine(item.powerLevel);
 		}
 	}
-}
+		
+		public class weapon 
+		{
+			public string weaponName = "Axe";
+			public int powerLevel = 1;
+		}
+	}
