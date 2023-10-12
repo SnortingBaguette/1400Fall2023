@@ -437,8 +437,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1184579595}
-  speed: 12
-  sprintSpeed: 24
+  speed: 6
+  sprintSpeed: 12
   gravity: -30
   groundCheck: {fileID: 1011437355}
   groundDistance: 0.4
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 1651544014}
   - component: {fileID: 1651544013}
   - component: {fileID: 1651544012}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
