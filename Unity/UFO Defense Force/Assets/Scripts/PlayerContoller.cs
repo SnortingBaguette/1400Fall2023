@@ -15,10 +15,19 @@ public class PlayerContoller : MonoBehaviour
     public Transform blaster;
     public GameObject laserBolt;
 
-    //Delete the objects that collide with the player
+    //Create a reference for the pickup object
+    public GameObject pickup;
+    public Transform pickupSpawn;
+
+    //Create pickup counter variables
+    public int pickupNumber = 0;
+
+    //Delete the objects that collide with the player and print a message
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        pickupNumber++;
+        Debug.Log("You have picked up " + pickupNumber + " items!");
     }
 
     // Update is called once per frame
@@ -42,7 +51,17 @@ public class PlayerContoller : MonoBehaviour
         {
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
         }
+    }
 
-        
+    private void FixedUpdate()
+    {
+        //Create a random number
+        int randomNumber = Random.Range(0, 1000);
+
+        //Instatiate the pickup based on the random number
+        if (randomNumber < 5)
+        {
+            Instantiate(pickup, pickupSpawn.transform.position, pickup.transform.rotation);
+        }
     }
 }
