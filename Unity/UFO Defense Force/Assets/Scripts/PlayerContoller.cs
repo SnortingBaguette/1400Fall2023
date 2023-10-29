@@ -8,7 +8,7 @@ public class PlayerContoller : MonoBehaviour
 {
     //Create Varibales for the player movement input
     public float horizontalInput;
-    public float speed = 20f;
+    public float speed = 30f;
     public float xRange = 25f;
 
     //Create Variables for the projectile spawning
@@ -21,6 +21,13 @@ public class PlayerContoller : MonoBehaviour
 
     //Create pickup counter variables
     public int pickupNumber = 0;
+
+    public GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //Reference GameManager script on GameManager object
+    }
 
     //Delete the objects that collide with the player and print a message
     private void OnTriggerEnter(Collider other)
@@ -46,8 +53,8 @@ public class PlayerContoller : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        //Instantiate the laser bolt
-        if (Input.GetKeyDown(KeyCode.Space))
+        //Instantiate the laser bolt if the game isn't over
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
         }

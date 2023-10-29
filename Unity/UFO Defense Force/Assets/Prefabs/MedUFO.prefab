@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2405f45ebbcf01d4896f4ce2f99190e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -25
+  speed: -15
 --- !u!114 &5793409753125190753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -20
+  gameManager: {fileID: 0}
 --- !u!54 &-4935563813647590109
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,6 +173,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9033009508235381366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366813ce7eb2d624590a897cb99c5151, type: 3}
+  m_Script: {fileID: 11500000, guid: f1dab00af7eb7ad48b0d5d6d4707e87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 8
