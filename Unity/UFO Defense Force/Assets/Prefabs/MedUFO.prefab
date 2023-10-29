@@ -178,3 +178,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
   scoreToGive: 8
+  soundSource: {fileID: 0}
+  soundItself: {fileID: 8300000, guid: 3530476e12ae29742973282dccfff5f4, type: 3}

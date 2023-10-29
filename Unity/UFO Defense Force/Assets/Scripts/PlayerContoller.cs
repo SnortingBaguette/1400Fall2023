@@ -24,9 +24,11 @@ public class PlayerContoller : MonoBehaviour
 
     public GameManager gameManager;
 
+
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //Reference GameManager script on GameManager object
+
     }
 
     //Delete the objects that collide with the player and print a message
@@ -57,6 +59,7 @@ public class PlayerContoller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+            FindObjectOfType<AudioManager>().Play("ShootingSound");
         }
     }
 
