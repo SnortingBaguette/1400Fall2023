@@ -59,7 +59,7 @@ public class PlayerContoller : MonoBehaviour
         int randomNumber = Random.Range(0, 1000);
 
         //Instatiate the pickup based on the random number
-        if (randomNumber < 5)
+        if (randomNumber <= 5)
         {
             Instantiate(pickup, pickupSpawn.transform.position, pickup.transform.rotation);
         }
