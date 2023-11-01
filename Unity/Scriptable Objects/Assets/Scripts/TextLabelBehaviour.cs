@@ -15,6 +15,6 @@ public class TextLabelBehaviour : MonoBehaviour
 
     public void UpdateLabel()
     {
-        label.text = dataObj.value.ToString();
+        label.text = dataObj.Value.ToString();
     }
 }
