@@ -7,6 +7,7 @@ public class TextLabelBehaviour : MonoBehaviour
     public Text label;
     public FloatData dataObj;
 
+
     private void Start()
     {
         label = GetComponent<Text>();
@@ -17,4 +18,5 @@ public class TextLabelBehaviour : MonoBehaviour
     {
         label.text = dataObj.Value.ToString();
     }
+
 }
